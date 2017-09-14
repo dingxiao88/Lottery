@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lottery.MainController">
+  <children>
+    <ImageView fitHeight="720.0" fitWidth="1280.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@BG.png" />
+      </image>
+    </ImageView>
+    <Label id="" alignment="CENTER" layoutX="301.0" layoutY="50.0" prefHeight="55.0" prefWidth="683.0" text="杭州市实业投资集团有限公司" textFill="BLACK">
+      <font>
+        <Font name="STXingkai" size="50.0" />
+      </font>
+    </Label>
+    <HBox layoutX="0.0" layoutY="207.0" prefHeight="125.0" prefWidth="1280.0" spacing="15.0">
+      <children>
+        <Label id="Label_Color4" fx:id="Lottery_Name1_Label" alignment="CENTER" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK">
+          <font>
+            <Font name="STXingkai" size="30.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label id="Label_Color4" fx:id="Lottery_Name2_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name3_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name4_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name5_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+      </children>
+      <padding>
+        <Insets left="35.0" />
+      </padding>
+    </HBox>
+    <HBox layoutX="0.0" layoutY="407.0" prefHeight="125.0" prefWidth="1280.0" spacing="15.0">
+      <children>
+        <Label id="Label_Color4" fx:id="Lottery_Name6_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name7_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name8_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name9_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+        <Label id="Label_Color4" fx:id="Lottery_Name10_Label" alignment="CENTER" font="$x1" minHeight="69.0" prefHeight="111.0" prefWidth="231.0" text="-----" textFill="BLACK" />
+      </children>
+      <padding>
+        <Insets left="35.0" />
+      </padding>
+    </HBox>
+    <Button id="B1" fx:id="Lottery_Start_Button" layoutX="567.0" layoutY="601.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="78.0" prefWidth="146.0" text="开始">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Button>
+  </children>
+  <stylesheets>
+    <URL value="@Servo.css" />
+  </stylesheets>
+</AnchorPane>
