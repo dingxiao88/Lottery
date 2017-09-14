@@ -18,7 +18,7 @@
         <Image url="@BG.png" />
       </image>
     </ImageView>
-    <Label id="" alignment="CENTER" layoutX="301.0" layoutY="50.0" prefHeight="55.0" prefWidth="683.0" text="杭州市实业投资集团有限公司" textFill="BLACK">
+    <Label id="" alignment="CENTER" layoutX="301.0" layoutY="50.0" prefHeight="55.0" prefWidth="683.0" text="XXXXX集团有限公司" textFill="BLACK">
       <font>
         <Font name="STXingkai" size="50.0" />
       </font>
