@@ -1,6 +1,6 @@
 package Lottery;
 /*
- * MK3Ëæ¶¯¿ØÖÆÏµÍ³-ÈË»úÄ£¿éÖ÷³ÌĞòÈë¿Ú
+ * MK3éšåŠ¨æ§åˆ¶ç³»ç»Ÿ-äººæœºæ¨¡å—ä¸»ç¨‹åºå…¥å£
  *
  * Copyright (c) 2013 Oracle and/or its affiliates. All rights reserved.
  *
@@ -41,33 +41,33 @@ import javafx.geometry.Rectangle2D;
  * @author DX
  */
 
-//@DX1-Èí¼şÓÅ»¯±êÊ¶
+//@DX1-è½¯ä»¶ä¼˜åŒ–æ ‡è¯†
 
 
 public class ScreensFramework extends Application {
 
-	//@1-Ö÷³ÌĞòstage
+	//@1-ä¸»ç¨‹åºstage
     public static Stage MK3_Stage;
-    //@2-Ö÷³ÌĞòscene
+    //@2-ä¸»ç¨‹åºscene
     public static Scene MK3_Scene;
 
-	//@3-Ö÷³ÌĞò¸ùroot
+	//@3-ä¸»ç¨‹åºæ ¹root
     public static Group root = new Group();
-	//@4-Ò³Ãæ¸ü¸ÄÇĞ»»login->Main
+	//@4-é¡µé¢æ›´æ”¹åˆ‡æ¢login->Main
 	public static SimpleStringProperty PageChange = new SimpleStringProperty();
-	//@5-Ö÷³ÌĞòÏÔÊ¾¶¨Ê±Æ÷
+	//@5-ä¸»ç¨‹åºæ˜¾ç¤ºå®šæ—¶å™¨
 	private static Servo_DisplayTimer Time_Displsy;
 
-	//@7-Ö÷Ò³ÃæÔËĞĞ±êÖ¾
+	//@7-ä¸»é¡µé¢è¿è¡Œæ ‡å¿—
 	public static boolean Main_Falg=true;
 
-	//@8-Ò³ÃæÎ»ÖÃÖ¸Ê¾
+	//@8-é¡µé¢ä½ç½®æŒ‡ç¤º
 	public static int  App_Page=0;    //0:login  1:main  2:performance test  3:help
 
-	//@9-½çÃæÖ÷µ÷¶ÈÆ÷
+	//@9-ç•Œé¢ä¸»è°ƒåº¦å™¨
     private ScreensController mainContainer;
 
-    //@10-½çÃæ³£Á¿
+    //@10-ç•Œé¢å¸¸é‡
     public static String screen1ID = "main";
     public static String screen1File = "Lottery.fxml";
 //    public static String screen2ID = "main";
@@ -82,27 +82,27 @@ public class ScreensFramework extends Application {
 //    public static String screen6File = "Help.fxml";
 
 
-    //@12-Êı¾İ´æ´¢Â·¾¶³£Á¿
+    //@12-æ•°æ®å­˜å‚¨è·¯å¾„å¸¸é‡
 	public static String MAIN_SaveData_Path = new String("D://");
-    //@13-Êı¾İÎÄ¼ş´æ´¢Â·¾¶
-	public static File MAIN_FileSave_Path;            //Êı¾İ´æ´¢Â·¾¶
-	//@14-´æ´¢ÎÄ¼şÎÄ¼ş¶ÔÏóÁĞ±í
+    //@13-æ•°æ®æ–‡ä»¶å­˜å‚¨è·¯å¾„
+	public static File MAIN_FileSave_Path;            //æ•°æ®å­˜å‚¨è·¯å¾„
+	//@14-å­˜å‚¨æ–‡ä»¶æ–‡ä»¶å¯¹è±¡åˆ—è¡¨
 	public static File[] MAIN_SaveFileList;
-	//@15-¼ÇÂ¼ÎÄ¼ş´æ´¢ÊıÁ¿
+	//@15-è®°å½•æ–‡ä»¶å­˜å‚¨æ•°é‡
 	public static int MAIN_SaveFile_Num;
 
-	//@16-ÌáÊ¾´°
+	//@16-æç¤ºçª—
     private static Notification.Notifier Main_Noti;
     private static Notification Noti_Targe;
 
-	//@17-´°¿Ú³ß´ç
+	//@17-çª—å£å°ºå¯¸
     private Rectangle2D bounds;
 
-    //@-×Ô¶¨Òå¼üÅÌ¼üÖµ
+    //@-è‡ªå®šä¹‰é”®ç›˜é”®å€¼
     public static KeyCode Key_Code;
-    //@-×Ô¶¨Òå¼üÅÌ²ã
+    //@-è‡ªå®šä¹‰é”®ç›˜å±‚
     public static int Main_Key_Level=0;
-    //@-¼üÅÌ´¥·¢¼ÆÊı
+    //@-é”®ç›˜è§¦å‘è®¡æ•°
     public static int Key_Count=0;
 
 
@@ -111,11 +111,11 @@ public class ScreensFramework extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-    	//@1-³õÊ¼»¯Stage
+    	//@1-åˆå§‹åŒ–Stage
     	MK3_Stage = new Stage(StageStyle.DECORATED);
-    	MK3_Stage.setTitle("º¼ÖİÊĞÊµÒµÍ¶×Ê¼¯ÍÅÓĞÏŞ¹«Ë¾");
+    	MK3_Stage.setTitle("XXXXé›†å›¢æœ‰é™å…¬å¸");
 
-    	//@2-¹ÒÔØÒ³Ãæ¿ØÖÆÆ÷
+    	//@2-æŒ‚è½½é¡µé¢æ§åˆ¶å™¨
         mainContainer = new ScreensController();
 
         mainContainer.loadScreen(screen1ID, screen1File);
@@ -126,13 +126,13 @@ public class ScreensFramework extends Application {
 //        mainContainer.loadScreen(screen6ID, screen6File);
 
 
-        //@3-Ò³Ãæ¸ü¸Ä¹ÒÔØ¸ü¸Ä¼àÌıÆ÷
+        //@3-é¡µé¢æ›´æ”¹æŒ‚è½½æ›´æ”¹ç›‘å¬å™¨
     	PageChange.addListener(new ChangeListener<Object>(){
 			@Override
 			public void changed(ObservableValue<?> arg0, Object arg1, Object newval) {
 				// TODO Auto-generated method stub
 
-				//@-ÇĞ»»µ½Ö÷½çÃæ
+				//@-åˆ‡æ¢åˆ°ä¸»ç•Œé¢
 				if(newval.toString().equals(new String("main")))
 				{
 					Platform.runLater(new Runnable() {
@@ -145,7 +145,7 @@ public class ScreensFramework extends Application {
 //							if(MainController.Page1_Run_Flag==true)
 //							MainController.curve_run_set(true);
 
-							//@-ÇĞ»»µ½Ö÷½çÃæ
+							//@-åˆ‡æ¢åˆ°ä¸»ç•Œé¢
 							mainContainer.setScreen(screen1ID);
 							App_Page=1;
 
@@ -157,46 +157,46 @@ public class ScreensFramework extends Application {
 						}
 					});
 				}
-				//@-ÇĞ»»µ½ĞÔÄÜ¼ì²â
+				//@-åˆ‡æ¢åˆ°æ€§èƒ½æ£€æµ‹
 				else if(newval.toString().equals(new String("performance_test")))
 				{
 
 				}
-				//@-ÇĞ»»µ½°ïÖúÒ³Ãæ
+				//@-åˆ‡æ¢åˆ°å¸®åŠ©é¡µé¢
 				else if(newval.toString().equals(new String("help")))
 				{
 
 				}
 			}});
 
-    	//@3-³õÊ¼»¯¼ÓÔØÖ÷Ò³Ãæ
+    	//@3-åˆå§‹åŒ–åŠ è½½ä¸»é¡µé¢
         mainContainer.setScreen(screen1ID);
         App_Page=1;
 
-		//@DX2-Log¿ªÊ¼
+		//@DX2-Logå¼€å§‹
 //		ScreensFramework.logger_FY.info("---------------Start----------------");
 //		ScreensFramework.logger_XH.info("---------------Start----------------");
 
-        //@5-¿ª»ú¼ì²â´æ´¢Êı¾İÊıÁ¿
+        //@5-å¼€æœºæ£€æµ‹å­˜å‚¨æ•°æ®æ•°é‡
         Check_File_Num();
 
 
-        //@6-scene¼ÓÔØÒ³Ãæ
+        //@6-sceneåŠ è½½é¡µé¢
         root = new Group();
         root.getChildren().addAll(mainContainer);
         MK3_Scene = new Scene(root);
 
-        //@8-stage¼ÓÔØ
+        //@8-stageåŠ è½½
 	    MK3_Stage.setScene(MK3_Scene);
 	    bounds = Screen.getPrimary().getBounds();
 	    MK3_Stage.setX(bounds.getMinX() + bounds.getWidth() / 2 - 1280 / 2);
 	    MK3_Stage.setY(bounds.getMinY() + bounds.getHeight() / 2 - 720 / 2);
 
 
-	    //@9-stageÏÔÊ¾
+	    //@9-stageæ˜¾ç¤º
 	    MK3_Stage.show();
 
-		//@10-Æô¶¯È«¾Ö¶¨Ê±Æ÷-50ms
+		//@10-å¯åŠ¨å…¨å±€å®šæ—¶å™¨-50ms
 	    Time_Displsy = new Servo_DisplayTimer(10);
     }
 
@@ -216,7 +216,7 @@ public class ScreensFramework extends Application {
 
 
 
-    /**ÌáÊ¾ĞÅÏ¢ÏÔÊ¾
+    /**æç¤ºä¿¡æ¯æ˜¾ç¤º
      *
      * @param Show_Mode
      * @param Show_Info
@@ -226,7 +226,7 @@ public class ScreensFramework extends Application {
     	String Noti_Title=null;
     	Image  Noti_Image=null;
 
-    	//@1-Noti±êºÅ
+    	//@1-Notiæ ‡å·
     	switch(Show_Mode)
     	{
     		case "Info":
@@ -250,10 +250,10 @@ public class ScreensFramework extends Application {
 
     	}
 
-    	//@3-½¨Á¢Noti
+    	//@3-å»ºç«‹Noti
     	Noti_Targe =  new Notification(Noti_Title, Show_Info, Noti_Image);
 
-    	//@4-ÏÔÊ¾Noti
+    	//@4-æ˜¾ç¤ºNoti
 		Platform.runLater(new Runnable() {
 			@Override
 			public void run() {
@@ -265,7 +265,7 @@ public class ScreensFramework extends Application {
 
 
 
-    /**¼ì²â´æ´¢Êı¾İÎÄ¼şÊıÁ¿
+    /**æ£€æµ‹å­˜å‚¨æ•°æ®æ–‡ä»¶æ•°é‡
      *
      */
     public static void Check_File_Num()
@@ -273,9 +273,9 @@ public class ScreensFramework extends Application {
     	MAIN_FileSave_Path = new File(MAIN_SaveData_Path);
     	if(MAIN_FileSave_Path.isDirectory())
     	{
-		   	 //»ñÈ¡ÎÄ¼şÁĞ±í
+		   	 //è·å–æ–‡ä»¶åˆ—è¡¨
 	    	 MAIN_SaveFileList = MAIN_FileSave_Path.listFiles();
-		   	 //»ñÈ¡ÎÄ¼şÊıÁ¿
+		   	 //è·å–æ–‡ä»¶æ•°é‡
 	    	 MAIN_SaveFile_Num=MAIN_SaveFileList.length;
 
 	    	 //System.out.println("ok"+MAIN_SaveFile_Num);
@@ -283,7 +283,7 @@ public class ScreensFramework extends Application {
     }
 
 
-	/**³ÌĞòÍË³ö
+	/**ç¨‹åºé€€å‡º
 	 *
 	 */
 	public static void cleanAndQuit() {
